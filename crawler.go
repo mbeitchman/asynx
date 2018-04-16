@@ -1,8 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func runCrawler(localpath string, cloudpath string) {
-	fmt.Printf("Local Path: %s\n", localpath)
-	fmt.Printf("Cloud Path: %s\n", cloudpath)
+	hash := getHash(localpath)
+	fmt.Printf("%x", hash)
 }
